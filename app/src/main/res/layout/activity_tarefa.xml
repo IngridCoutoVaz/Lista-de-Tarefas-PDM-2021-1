@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ifsp.scl.pdm.listadetarefaspdm.view.TarefaActivity" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/nomeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome_usuario"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/dataCriacaoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dataCriacao"
+            android:inputType="text|date"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nomeEt"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/tituloEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/titulo"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dataCriacaoEt"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/descricaoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/descricao"
+            android:inputType="textLongMessage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloEt"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/dataTerminoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dataTermino"
+            android:inputType="text|date"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descricaoEt"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dataTerminoEt"
+            android:text="@string/salvar"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:onClick="onClickButton"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
