@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "242369732172",
+    "project_id": "lista-de-tarefa-73262",
+    "storage_bucket": "lista-de-tarefa-73262.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242369732172:android:d7d6af05c34e04fafb9ee9",
+        "android_client_info": {
+          "package_name": "br.edu.ifsp.scl.pdm.listadetarefaspdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242369732172-b0i1hnespa8sa0iboj4q8suoa5d7li8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGrN4Nu43UPx8Qu7tcVq5ibjXt92-cfNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242369732172-b0i1hnespa8sa0iboj4q8suoa5d7li8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

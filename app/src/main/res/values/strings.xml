@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lista de Tarefas PDM</string>
+    <string name="nome_usuario">Nome do Usário</string>
+    <string name="dataCriacao">Data de Criação</string>
+    <string name="titulo">Título da Tarefa</string>
+    <string name="descricao">Descrição</string>
+    <string name="dataTermino">Data de Término</string>
+    <string name="salvar">Salvar</string>
+</resources>
