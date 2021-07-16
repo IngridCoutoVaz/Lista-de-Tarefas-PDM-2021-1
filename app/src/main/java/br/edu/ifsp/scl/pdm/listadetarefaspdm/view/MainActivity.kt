@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
     private lateinit var tarefasAdapter: TarefaAdapter
     private lateinit var tarefasLayoutManager: LinearLayoutManager
     private  lateinit var novaTarefaLauncher: ActivityResultLauncher<Intent>
-    private  lateinit var sairLauncher: Activity
     private  lateinit var editaTarefaLauncher: ActivityResultLauncher<Intent>
 
     private lateinit var tarefaController: TarefaController
