@@ -37,13 +37,14 @@ class TarefaAdapter(
 
     override fun onBindViewHolder(holder: TarefaViewHolder, position: Int) {
         val tarefa = tarefaList[position]
+        val textConcluida = if(tarefa.tarefaConcluida.toString() == "true") "Concluída" else "Pendente"
 
         holder.tituloTarefa.text = tarefa.titulo
         holder.usuario.text = tarefa.usuario
         holder.dataCriacao.text = tarefa.dataCriacao
         holder.descricao.text = tarefa.descricao
         holder.dataTermino.text = tarefa.dataTermino
-        holder.concluida.text  = tarefa.tarefaConcluida.toString()
+        holder.concluida.text = textConcluida
         holder.itemView.setOnClickListener {
             onTarefaClickListener.onTarefaClick(position)
         }

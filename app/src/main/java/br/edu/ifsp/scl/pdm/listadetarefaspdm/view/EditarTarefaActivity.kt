@@ -22,14 +22,14 @@ class EditarTarefaActivity : AppCompatActivity() {
 
 
         activityEditarTarefaBinding.dataCriacaoEditarEt.setText(tarefas?.dataCriacao)
-        activityEditarTarefaBinding.dataCumprimentoEditarEt.setText(tarefas?.dataTermino)
+        activityEditarTarefaBinding.dataTerminoEditarEt.setText(tarefas?.dataTermino)
         activityEditarTarefaBinding.descricaoEditarEt.setText(tarefas?.descricao)
         activityEditarTarefaBinding.tituloEditarEt.setText(tarefas?.titulo)
 
     }
 
     fun onClick(view: View) {
-        tarefas?.dataTermino = activityEditarTarefaBinding.dataCumprimentoEditarEt.text.toString()
+        tarefas?.dataTermino = activityEditarTarefaBinding.dataTerminoEditarEt.text.toString()
         tarefas?.descricao = activityEditarTarefaBinding.descricaoEditarEt.text.toString()
 
         val retorno = Intent()

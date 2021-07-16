@@ -113,6 +113,7 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         tarefa = tarefasList.get(tarefasAdapter.getPosicao())
+
         when (item.itemId){
             R.id.removerTarefaMi -> {
                 tarefasList.remove(tarefa)
@@ -121,13 +122,20 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
                 true
             }
             R.id.editarTarefaMi -> {
-                //if(tarefa.concluid.istrue
-                val intent = Intent(this,EditarTarefaActivity::class.java)
+                if (tarefa.tarefaConcluida) {
+                    Toast.makeText(this,"Tarefa concluída, não pode ser alterada", Toast.LENGTH_SHORT).show()
+                    return false
+                }
+                val intent = Intent(this, EditarTarefaActivity::class.java)
                 intent.putExtra(Intent.EXTRA_USER, tarefa)
                 editaTarefaLauncher.launch(intent)
                 return true
             }
             R.id.concluirTarefaMi -> {
+                if (tarefa.tarefaConcluida) {
+                    Toast.makeText(this,"Tarefa concluída, não pode ser concluída (de novo)", Toast.LENGTH_SHORT).show()
+                    return false
+                }
                 tarefa.tarefaConcluida = true
                 tarefaController.atualizaTarefa(tarefa)
                 atualizaAdapter()
