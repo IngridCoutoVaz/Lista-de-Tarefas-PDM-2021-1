@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.pdm.listadetarefaspdm.view
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.ContextMenu
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
     private lateinit var tarefasAdapter: TarefaAdapter
     private lateinit var tarefasLayoutManager: LinearLayoutManager
     private  lateinit var novaTarefaLauncher: ActivityResultLauncher<Intent>
+    private  lateinit var sairLauncher: Activity
     private  lateinit var editaTarefaLauncher: ActivityResultLauncher<Intent>
 
     private lateinit var tarefaController: TarefaController
@@ -36,8 +38,6 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
 
         tarefaController = TarefaController(this)
         tarefasList = mutableListOf()
-
-
 
         tarefasList=tarefaController.buscaTarefas()
         tarefasLayoutManager = LinearLayoutManager(this)
@@ -96,13 +96,13 @@ class MainActivity : AppCompatActivity(), OnTarefaClickListener {
         }
         R.id.sairMi -> {
             AutenticacaoFirebase.firebaseAuth.signOut()
+            setContentView(R.layout.activity_login)
             true
         }
         else -> {
             false
         }
     }
-
 
     override fun onStart() {
         super.onStart()

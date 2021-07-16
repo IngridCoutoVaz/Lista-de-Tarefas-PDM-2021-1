@@ -6,4 +6,5 @@
     <string name="descricao">Descrição</string>
     <string name="dataTermino">Data de Término</string>
     <string name="salvar">Salvar</string>
+    <string name="nomeUsuario">Usuário</string>
 </resources>
